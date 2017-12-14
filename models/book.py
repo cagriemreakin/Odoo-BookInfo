@@ -11,3 +11,9 @@ class Book(models.Model):
     author_ids = fields.Many2many('res.partner',string='Authors')
     _sql_constraints = [('isbn_uniq', 'unique (isbn)','ISBN already exists!')]
 
+    @api.constrains('publication_date')
+    def _check_publication_date(self):
+        for r in self:
+            if r.publication_date > fields.Date.today():
+                raise models.ValidationError('Publication date must be in the past !')
+    
