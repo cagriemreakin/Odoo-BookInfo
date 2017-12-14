@@ -3,5 +3,6 @@
 'name': "About Book",
 'summary': "Book Information",
 'depends': ['base'],
-'data': ['views/book.xml'],
+'data': ['views/book.xml',
+         'views/author.xml'],
 }
