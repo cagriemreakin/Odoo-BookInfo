@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <odoo>
+    <data>
+     <record model="ir.ui.view" id="language_form_view">
+            <field name="name">about.language.form</field>
+            <field name="model">about.language</field>
+            <field name="arch" type="xml">
+                <form string="Language Form">
+                    
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="language_list_action">
+            <field name="name">Language</field>
+            <field name="res_model">about.language</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="language_menu" name="Language"
+                  parent="about_book_menu"
+                  action="language_list_action"/>
+    </data>
+</odoo>

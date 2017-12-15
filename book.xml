@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <data>
+      <!-- Action -->
+      <act_window id="about_book_action" name="About Books" res_model="about.book" />
+
+      <!-- Menu Item -->
+                
+      <menuitem id="about_book_menu" 
+                name="About Books" 
+                action="about_book_action" 
+                parent="" 
+                sequence="5" />
+
+      <!-- Book View Form -->
+      <record id="about_book_view_form" model="ir.ui.view">
+         <field name="name">About Book Form</field>
+         <field name="model">about.book</field>
+         <field name="arch" type="xml">
+            <form>
+               <group>
+                  <field name="isbn" />
+                  <field name="name" />
+                  <field name="author_ids" widget="many2many_tags" />
+                  <field name="book_genre" widget="many2many_tags" />
+                  <field name="book_language" widget="many2many_tags" />
+               </group>
+               <group>
+                  <field name="publication_date" />
+               </group>
+            </form>
+         </field>
+      </record>
+
+      <!-- Book View Tree -->
+      <record id="about_book_view_tree" model="ir.ui.view">
+         <field name="name">About Book List</field>
+         <field name="model">about.book</field>
+         <field name="arch" type="xml">
+            <tree>
+               <field name="isbn" />
+               <field name="name" />
+               <field name="publication_date" />
+            </tree>
+         </field>
+      </record>
+      
+      <!-- Book View Search -->
+      <record id="about_book_view_search" model="ir.ui.view">
+         <field name="name">About Book Search</field>
+         <field name="model">about.book</field>
+         <field name="arch" type="xml">
+            <search>
+               <field name="isbn" />
+               <field name="name" />
+               <field name="author_ids" />
+               <filter string="No Authors" domain="[('author_ids','=',True)]" />
+               <field name="book_genre" />
+               <field name="book_language" />
+            </search>
+         </field>
+      </record>
+   </data>
+</odoo>
