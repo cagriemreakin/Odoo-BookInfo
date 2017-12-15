@@ -11,7 +11,7 @@ class Book(models.Model):
     author_ids = fields.Many2many('about.author', select=True, required=True,string='Authors')
     _sql_constraints = [('isbn_uniq', 'unique (isbn)','ISBN already exists!')]
     book_genre = fields.One2many('about.genre', 'genre_id',select=True,required=True, string="Genres")
-    
+    book_language = fields.One2many('about.language', 'language_id',select=True,required=True, string="Language")
     
     @api.constrains('publication_date')
     def _check_publication_date(self):

@@ -1,1 +1,1 @@
-from . import book,author
+from . import book,author,bookgenre,language
