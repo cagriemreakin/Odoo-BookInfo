@@ -10,13 +10,16 @@ class Book(models.Model):
     publication_date = fields.Date('Publication Date')
     author_ids = fields.Many2many('about.author', select=True, required=True,string='Authors')
     _sql_constraints = [('isbn_uniq', 'unique (isbn)','ISBN already exists!')]
+    book_genre = fields.One2many('about.genre', 'genre_id',select=True,required=True, string="Genres")
+    
     
     @api.constrains('publication_date')
     def _check_publication_date(self):
         for r in self:
-            if (r.publication_date > fields.Date.today()) and (r.publication_date == False):
+            if (r.publication_date > fields.Date.today()):
                 raise models.ValidationError('Publication date must be in the past !')
-    
+            if (r.publication_date == False):
+                raise models.ValidationError('Date must not be empty!')
     @api.constrains('author_ids')    
     def has_author(self):
         for r in self:
