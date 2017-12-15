@@ -4,7 +4,7 @@
         <!-- Add instructor field to existing view -->
         <record model="ir.ui.view" id="about_author_form_view">
             <field name="name">about.author.form</field>
-            <field name="model">res.partner</field>
+            <field name="model">about.author</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
             <data>
@@ -12,21 +12,18 @@
                     <field name="is_book_author"/>     
                 </xpath>
                 <xpath expr="//page[@name='sales_purchases']" position="attributes" >
-    <attribute name="invisible">1</attribute>
-</xpath>
+                    <attribute name="invisible">1</attribute>
+                </xpath>
                 <xpath expr="//page[@name='internal_notes']" position="attributes" >
-    <attribute name="invisible">1</attribute>
-    
-           
-</xpath>
-
+                    <attribute name="invisible">1</attribute>
+                </xpath>
             </data> 
             </field>
         </record>
 
         <record model="ir.actions.act_window" id="about_author_list_action">
             <field name="name">Author</field>
-            <field name="res_model">res.partner</field>
+            <field name="res_model">about.author</field>
             <field name="view_mode">tree,form</field>
         </record>
         
