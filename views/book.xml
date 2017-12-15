@@ -5,7 +5,11 @@
       <act_window id="about_book_action" name="About Books" res_model="about.book" />
 
       <!-- Menu Item -->
-      <menuitem id="about_book_menu" name="About Books" action="about_book_action" parent="" sequence="5" />
+      <menuitem id="about_book_menu" 
+                name="About Books" 
+                action="about_book_action" 
+                parent="" 
+                sequence="5" />
 
       <!-- Book View Form -->
       <record id="about_book_view_form" model="ir.ui.view">
@@ -17,6 +21,7 @@
                   <field name="isbn" />
                   <field name="name" />
                   <field name="author_ids" widget="many2many_tags" />
+                  <field name="book_genre" widget="many2many_tags" />
                </group>
                <group>
                   <field name="publication_date" />
@@ -47,7 +52,8 @@
                <field name="isbn" />
                <field name="name" />
                <field name="author_ids" />
-               <filter string="No Authors" domain="[('author_ids','=',False)]" />
+               <filter string="No Authors" domain="[('author_ids','=',True)]" />
+               <field name="book_genre" />
             </search>
          </field>
       </record>
