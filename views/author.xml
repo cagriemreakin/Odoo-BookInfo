@@ -11,12 +11,6 @@
                 <xpath expr="//field[@name='category_id']" position="after">                
                     <field name="is_book_author"/>     
                 </xpath>
-                <xpath expr="//page[@name='sales_purchases']" position="attributes" >
-                    <attribute name="invisible">1</attribute>
-                </xpath>
-                <xpath expr="//page[@name='internal_notes']" position="attributes" >
-                    <attribute name="invisible">1</attribute>
-                </xpath>
             </data> 
             </field>
         </record>
@@ -26,7 +20,6 @@
             <field name="res_model">about.author</field>
             <field name="view_mode">tree,form</field>
         </record>
-        
         <menuitem id="author_menu" name="Authors"
                   parent="about_book_menu"
                   action="about_author_list_action"/>
