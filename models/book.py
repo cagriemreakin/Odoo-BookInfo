@@ -14,7 +14,7 @@ class Book(models.Model):
     @api.constrains('publication_date')
     def _check_publication_date(self):
         for r in self:
-            if r.publication_date > fields.Date.today():
+            if (r.publication_date > fields.Date.today()) and (r.publication_date == False):
                 raise models.ValidationError('Publication date must be in the past !')
     
     @api.constrains('author_ids')    
@@ -23,4 +23,9 @@ class Book(models.Model):
             if r.author_ids == False:
                 raise models.ValidationError('Book must have at least 1 author!')
     
- 
+    @api.one
+    def unlink(self):
+        rule = self.env['about.book']
+        if rule.search([('author_ids', '!=', False)]):
+            pass
+        return super(Book,self).unlink()
