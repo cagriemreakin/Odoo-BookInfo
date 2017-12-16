@@ -2,7 +2,7 @@
 <odoo>
    <data>
       <!-- Views -->
-      <record id="about_author_form_view" model="ir.ui.view">
+      <record model="ir.ui.view" id="about_author_form_view">
          <field name="name">about.author.form</field>
          <field name="model">about.author</field>
          <field name="inherit_id" ref="base.view_partner_form" />
@@ -14,13 +14,13 @@
             </data>
          </field>
       </record>
-      <!-- Menu -->
-      <menuitem id="author_menu" name="Authors" parent="top_menu" action="about_author_list_action" />
       <!-- Action -->
-      <record id="about_author_list_action" model="ir.actions.act_window">
+      <record model="ir.actions.act_window" id="about_author_list_action">
          <field name="name">Author</field>
          <field name="res_model">about.author</field>
          <field name="view_mode">tree,form</field>
       </record>
+      <!-- Menu -->
+      <menuitem id="author_menu" name="Authors" parent="top_menu" action="about_author_list_action" />
    </data>
 </odoo>

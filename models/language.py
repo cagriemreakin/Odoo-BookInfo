@@ -8,7 +8,7 @@ class Language(models.Model):
     
     #Model Field
     name = fields.Char('Language',required=True)
-    
+    _order = 'name asc'
     _sql_constraints = [(
         'name_uniq', 
         'unique (name)',

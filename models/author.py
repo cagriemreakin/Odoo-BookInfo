@@ -5,7 +5,7 @@ class Author(models.Model):
     
     _name='about.author'
     _inherits = {'res.partner' : 'partner_id'}
-    
+    _order = 'name asc'
     #Relation with Book Model
     is_book_author= fields.Boolean(
         'Is Book Author',
@@ -26,4 +26,3 @@ class Author(models.Model):
         if books:   
             books.unlink()
         return super(Author, self).unlink()
-    

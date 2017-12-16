@@ -5,7 +5,7 @@ class Book(models.Model):
     
     _name = 'about.book' 
     _description = 'Book Information'
-    _order = 'publication_date desc, name'
+    _order = 'publication_date desc'
     
     _sql_constraints = [(
         'isbn_uniq', 

@@ -8,6 +8,7 @@ class BookGenre(models.Model):
     
     #Model Field
     name = fields.Char('Genre',required=True)
+    _order = 'name asc'
     
     _sql_constraints = [(
         'name_uniq', 
@@ -22,7 +23,6 @@ class BookGenre(models.Model):
         string="Book Genre"
     )
     
-
     
     #First letter capitalization when onchange
     @api.onchange('name')
