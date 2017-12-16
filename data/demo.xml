@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+        
+        <!--Genre Records-->
+        
+        <record id="genre_1_demo" model="about.genre">
+            <field name="name">Computer Science</field>
+        </record>
+        <record id="genre_2_demo" model="about.genre">
+            <field name="name">Satire</field>
+        </record>
+        <record id="genre_3_demo" model="about.genre">
+            <field name="name">Drama</field>
+        </record>
+        <record id="genre_4_demo" model="about.genre">
+            <field name="name">Action and Adventure</field>
+        </record>
+        <record id="genre_5_demo" model="about.genre">
+            <field name="name">Romance</field>
+        </record>
+        <record id="genre_6_demo" model="about.genre">
+            <field name="name">Mystery</field>
+        </record>
+        <record id="genre_7_demo" model="about.genre">
+            <field name="name">Horror</field>
+        </record>
+        <record id="genre_8_demo" model="about.genre">
+            <field name="name">Health</field>
+        </record>
+        <record id="genre_9_demo" model="about.genre">
+            <field name="name">History</field>
+        </record>
+        <record id="genre_10_demo" model="about.genre">
+            <field name="name">Encyclopedias</field>
+        </record>
+       
+        <!--Language Records-->
+        
+        <record id="language_1_demo" model="about.language">
+            <field name="name">Turkish</field>
+        </record>
+        <record id="language_2_demo" model="about.language">
+            <field name="name">English</field>
+        </record>
+        <record id="language_3_demo" model="about.language">
+            <field name="name">German</field>
+        </record>
+        <record id="language_4_demo" model="about.language">
+            <field name="name">Spanish</field>
+        </record>
+        <record id="language_5_demo" model="about.language">
+            <field name="name">Japanish</field>
+        </record>
+        <record id="language_6_demo" model="about.language">
+            <field name="name">Korean</field>
+        </record>
+        <record id="language_7_demo" model="about.language">
+            <field name="name">Macedonian</field>
+        </record>
+        <record id="language_8_demo" model="about.language">
+            <field name="name">Greek</field>
+        </record>
+        <record id="language_9_demo" model="about.language">
+            <field name="name">Russian</field>
+        </record>
+        <record id="language_10_demo" model="about.language">
+            <field name="name">Finnish</field>
+        </record>
+        
+        <!--Publisher Records-->
+        
+        <record id="publisher_1_demo" model="about.publisher">
+            <field name="name">Abakus</field>
+            <field name="is_book_publisher">True</field>
+            <field name="email">abakus@gmail.com</field>
+            <field name="mobile">+90 183 45 67</field>
+        </record>
+        
+        <record id="publisher_2_demo" model="about.publisher">
+            <field name="name">Longman</field>
+            <field name="is_book_publisher">True</field>
+            <field name="email">longman@gmail.com</field>
+            <field name="mobile">+00 123 45 67</field>
+        </record>
+       
+        <record id="publisher_3_demo" model="about.publisher">
+            <field name="name">Abc Yayınevi</field>
+            <field name="is_book_publisher">True</field>
+
+            <field name="email">abc@gmail.com</field>
+            <field name="mobile">+20 123 45 67</field>
+        </record>
+       
+               
+        <record id="publishe_4_demo" model="about.publisher">
+            <field name="name">Araf Yayımcılık</field>
+            <field name="is_book_publisher">True</field>
+            <field name="email">araf@gmail.com</field>
+            <field name="mobile">+90 128 45 67</field>
+        </record>
+       
+    
+        <record id="publisher_5_demo" model="about.publisher">
+            <field name="name">Arcade</field>
+            <field name="is_book_publisher">True</field>
+            <field name="email">arcade@gmail.com</field>
+            <field name="mobile">+90 823 45 67</field>
+        </record>
+       
+        <record id="publisher_6_demo" model="about.publisher">
+            <field name="name">Akın</field>
+            <field name="is_book_publisher">False</field>
+            <field name="email">akin@gmail.com</field>
+            <field name="mobile">+00 123 45 67</field>
+        </record>
+        
+         <record id="publisher_7_demo" model="about.publisher">
+            <field name="name">Hurriyet</field>
+            <field name="is_book_publisher">False</field>
+            <field name="email">hurriyet@gmail.com</field>
+            <field name="mobile">+90 123 48 67</field>
+        </record>
+       
+        <record id="publisher_8_demo" model="about.publisher">
+            <field name="name">Vatan</field>
+            <field name="is_book_publisher">False</field>
+            <field name="email">vatan@vatan.com</field>
+            <field name="mobile">+00 123 45 67</field>
+        </record>
+       
+        <record id="publisher_9_demo" model="about.publisher">
+            <field name="name">Olay</field>
+            <field name="is_book_publisher">False</field>
+            <field name="email">olay@gmail.com</field>
+            <field name="mobile">+90 223 45 67</field>
+        </record>
+        
+        <record id="publisher_10_demo" model="about.publisher">
+            <field name="name">Penguen</field>
+            <field name="is_book_publisher">False</field>
+            <field name="email">penguen@gmail.com</field>
+            <field name="mobile">+90 223 45 67</field>
+        </record> 
+        
+        
+        
+          
+        <!--Author Records-->
+        
+        <record id="author_1_demo" model="about.author">
+            <field name="name">İlber Ortaylı</field>
+            <field name="is_book_author">True</field>
+            <field name="coutry">Turkey</field>
+            <field name="email">ilber@gmail.com</field>
+            <field name="mobile">+90 183 45 67</field>
+        </record>
+        
+        <record id="author_2_demo" model="about.author">
+            <field name="name">Paul Deitel</field>
+            <field name="is_book_author">True</field>
+            <field name="coutry">United States</field>
+            <field name="email">deitel@gmail.com</field>
+            <field name="mobile">+00 123 45 67</field>
+        </record>
+       
+        <record id="author_3_demo" model="about.author">
+            <field name="name">Islam Elgedawy</field>
+            <field name="is_book_author">True</field>
+            <field name="coutry">Egypt</field>
+            <field name="email">islam@gmail.com</field>
+            <field name="mobile">+20 123 45 67</field>
+        </record>
+       
+               
+        <record id="author_4_demo" model="about.author">
+            <field name="name">Gülse Birsel</field>
+            <field name="is_book_author">True</field>
+            <field name="coutry">Turkey</field>
+            <field name="email">birsel@gmail.com</field>
+            <field name="mobile">+90 128 45 67</field>
+        </record>
+       
+    
+        <record id="author_5_demo" model="about.author">
+            <field name="name">Azra Kohen</field>
+            <field name="is_book_author">True</field>
+            <field name="coutry">Turkey</field>
+            <field name="email">akohen@gmail.com</field>
+            <field name="mobile">+90 823 45 67</field>
+        </record>
+       
+        <record id="author_6_demo" model="about.author">
+            <field name="name">Stephan King</field>
+            <field name="is_book_author">True</field>
+            <field name="coutry">United States</field>
+            <field name="email">sking@gmail.com</field>
+            <field name="mobile">+00 123 45 67</field>
+        </record>
+        
+         <record id="author_7_demo" model="about.author">
+            <field name="name">Ahmet Yazıcı</field>
+            <field name="is_book_author">False</field>
+            <field name="coutry">Turkey</field>
+            <field name="email">ahmetyazici@gmail.com</field>
+            <field name="mobile">+90 123 48 67</field>
+        </record>
+       
+        <record id="author_8_demo" model="about.author">
+            <field name="name">Elon Musk</field>
+            <field name="is_book_author">False</field>
+            <field name="coutry">United States</field>
+            <field name="email">musk@spacex.com</field>
+            <field name="mobile">+00 123 45 67</field>
+        </record>
+       
+        <record id="author_9_demo" model="about.author">
+            <field name="name">Ali Turan</field>
+            <field name="is_book_author">False</field>
+            <field name="coutry">Turkey</field>
+            <field name="email">alituran@gmail.com</field>
+            <field name="mobile">+90 223 45 67</field>
+        </record>
+        
+        <record id="author_10_demo" model="about.author">
+            <field name="name">Ahmet Coşar</field>
+            <field name="is_book_author">False</field>
+            <field name="coutry">Turkey</field>
+            <field name="email">acosar@metu.edu.tr</field>
+            <field name="mobile">+90 223 45 67</field>
+        </record> 
+        
+       
+        <!--Book Records-->
+        
+        <record id="book_1_demo" model="about.book">
+            <field name="isbn">10</field>
+            <field name="name">İstanbul'dan Sayfalar</field>
+            <field name="author_ids" eval="[(6, 0, [ref('author_1_demo')])]"/>
+            <field name="publisher_ids" eval="[(6, 0, [ref('publisher_1_demo')])]"/>
+            <field name="book_genre" eval="[(6, 0, [ref('genre_9_demo')])]"/>
+            <field name="book_language" eval="[(6, 0, [ref('language_1_demo')])]"/>
+            <field name="publication_date">12/10/2010</field>
+        </record>
+        
+        
+        <record id="book_2_demo" model="about.book">
+            <field name="isbn">20</field>
+            <field name="name">Python</field>
+            <field name="author_ids" eval="[(6, 0, [ref('author_2_demo')])]"/>
+            <field name="publisher_ids" eval="[(6, 0, [ref('publisher_2_demo')])]"/>
+            <field name="book_genre" eval="[(6, 0, [ref('genre_3_demo')])]"/>
+            <field name="book_language" eval="[(6, 0, [ref('language_2_demo')])]"/>
+            <field name="publication_date">10/10/2010</field>
+        </record>
+        
+                
+        <record id="book_3_demo" model="about.book">
+            <field name="isbn">30</field>
+            <field name="name">Java</field>
+            <field name="author_ids" eval="[(6, 0, [ref('author_2_demo')])]"/>
+            <field name="publisher_ids" eval="[(6, 0, [ref('publisher_2_demo')])]"/>
+            <field name="book_genre" eval="[(6, 0, [ref('genre_1_demo')])]"/>
+            <field name="book_language" eval="[(6, 0, [ref('language_3_demo')])]"/>
+            <field name="publication_date">19/10/2017</field>
+        </record>
+        
+        <record id="book_4_demo" model="about.book">
+            <field name="isbn">40</field>
+            <field name="name">C++</field>
+            <field name="author_ids" eval="[(6, 0, [ref('author_2_demo'),ref('author_3_demo')])]"/>
+            <field name="publisher_ids" eval="[(6, 0, [ref('publisher_1_demo')])]"/>
+            <field name="book_genre" eval="[(6, 0, [ref('genre_1_demo')])]"/>
+            <field name="book_language" eval="[(6, 0, [ref('language_1_demo')])]"/>
+            <field name="publication_date">18/05/2015</field>
+        </record>
+        
+        <record id="book_5_demo" model="about.book">
+            <field name="isbn">50</field>
+            <field name="name">Fi</field>
+            <field name="author_ids" eval="[(6, 0, [ref('author_5_demo')])]"/>
+            <field name="publisher_ids" eval="[(6, 0, [ref('publisher_5_demo')])]"/>
+            <field name="book_genre" eval="[(6, 0, [ref('genre_3_demo'),ref('genre_5_demo'),ref('genre_6_demo')])]"/>
+            <field name="book_language" eval="[(6, 0, [ref('language_1_demo')])]"/>
+            <field name="publication_date">21/12/2015</field>
+        </record>
+        
+  </data>
+</odoo>
