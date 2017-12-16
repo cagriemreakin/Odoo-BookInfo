@@ -1,15 +1,28 @@
 # -*- coding: utf-8 -*-
+from odoo import models, fields,api
 import re
-
-from odoo import api, fields, models
-
 
 class BookGenre(models.Model):
     
     _name='about.genre'
+    
+    #Model Field
     name = fields.Char('Genre',required=True)
-    genre_id = fields.Many2one('about.book',  select=True,string="Book Genre")
-    _sql_constraints = [('name_uniq', 'unique (name)','Genre already exists!')]
+    
+    _sql_constraints = [(
+        'name_uniq', 
+        'unique (name)',
+        'Genre already exists!')
+    ]
+    
+    #Relation with Book Model
+    genre_id = fields.Many2one(
+        'about.book',  
+        select=True,
+        string="Book Genre"
+    )
+    
+
     
     #First letter capitalization when onchange
     @api.onchange('name')
@@ -22,3 +35,4 @@ class BookGenre(models.Model):
     def is_valid_name(self):
             if not re.match("^[A-Za-z\s&-]*$",self.name):
                 raise models.ValidationError('Genre should be alphabetic !')
+    

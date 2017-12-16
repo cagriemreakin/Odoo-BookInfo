@@ -1,28 +1,70 @@
 # -*- coding: utf-8 -*-
-from odoo import api, fields, models
-
+from odoo import models, fields,api
 
 class Book(models.Model):
     
     _name = 'about.book' 
     _description = 'Book Information'
     _order = 'publication_date desc, name'
-    isbn = fields.Char('ISBN',required=True)
-    name = fields.Char('Title', required=True)
-    publication_date = fields.Date('Publication Date')
     
-    author_ids = fields.Many2many('about.author', select=True, 
-                                  required=True,string='Authors',
-                                  domain=[('is_book_author','=',True)])
+    _sql_constraints = [(
+        'isbn_uniq', 
+        'unique (isbn)',
+        'ISBN already exists!')
+    ]
     
-    publisher_ids = fields.Many2many('about.publisher', select=True, 
-                                    required=True,string='Publishers',
-                                    domain=[('is_book_publisher','=',True)])
+    #Model Fields
+    isbn = fields.Char(
+        'ISBN',
+        required=True
+    )
     
-    _sql_constraints = [('isbn_uniq', 'unique (isbn)','ISBN already exists!')]
+    name = fields.Char(
+        'Title', 
+        required=True
+    )
     
-    book_genre = fields.One2many('about.genre', 'genre_id',select=True,required=True, string="Genres")
-    book_language = fields.One2many('about.language', 'language_id',select=True,required=True, string="Language")
+    publication_date = fields.Date(
+        'Publication Date'
+    )
+    
+    """ Relations with Other Models"""
+    
+    #Relation with Author Model
+    author_ids = fields.Many2many(
+        'about.author', 
+        select=True,
+        required=True,
+        string='Authors',
+        domain=[('is_book_author','=',True)]
+    )
+    
+    #Relation with Publisher Model
+    publisher_ids = fields.Many2many(
+        'about.publisher', 
+        select=True, 
+        required=True,
+        string='Publishers',
+        domain=[('is_book_publisher','=',True)]
+    )
+    
+    #Relation with Genre Model
+    book_genre = fields.One2many(
+        'about.genre',
+        'genre_id',
+        select=True,
+        required=True, 
+        string="Genres"
+    )
+    
+    #Relation with Language Model
+    book_language = fields.One2many(
+        'about.language',
+        'language_id',
+        select=True,
+        required=True, 
+        string="Language"
+    )
     
     
     @api.constrains('publication_date')
@@ -38,3 +80,5 @@ class Book(models.Model):
         for r in self:
             if r.author_ids == False:
                 raise models.ValidationError('Book must have at least 1 author!')
+    
+
