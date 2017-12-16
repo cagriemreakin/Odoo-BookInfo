@@ -1,0 +1,35 @@
+<odoo>
+  <data>
+        <record id="genre 1" model="about.genre">
+            <field name="name">Science fiction</field>
+        </record>
+        <record id="genre 2" model="about.genre">
+            <field name="name">Satire</field>
+        </record>
+        <record id="genre 3" model="about.genre">
+            <field name="name">Drama</field>
+        </record>
+        <record id="genre 4" model="about.genre">
+            <field name="name">Action and Adventure</field>
+        </record>
+        <record id="genre 5" model="about.genre">
+            <field name="name">Romance</field>
+        </record>
+        <record id="genre 6" model="about.genre">
+            <field name="name">Mystery</field>
+        </record>
+        <record id="genre 7" model="about.genre">
+            <field name="name">Horror</field>
+        </record>
+        <record id="genre 8" model="about.genre">
+            <field name="name">Health</field>
+        </record>
+        <record id="genre 9" model="about.genre">
+            <field name="name">History</field>
+        </record>
+        <record id="genre 10" model="about.genre">
+            <field name="name">Encyclopedias</field>
+        </record>
+        
+  </data>
+</odoo>
