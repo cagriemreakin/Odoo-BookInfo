@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields,api
 import re
+
+from odoo import api, fields, models
+
 
 class BookGenre(models.Model):
     
@@ -20,4 +22,3 @@ class BookGenre(models.Model):
     def is_valid_name(self):
             if not re.match("^[A-Za-z\s&-]*$",self.name):
                 raise models.ValidationError('Genre should be alphabetic !')
-    

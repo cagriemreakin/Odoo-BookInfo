@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields,api
 import re
+
+from odoo import api, fields, models
+
 
 class Language(models.Model):
     
@@ -20,4 +22,3 @@ class Language(models.Model):
     def is_valid_name(self):
             if not re.match("^[A-Za-z]*$",self.name):
                 raise models.ValidationError('Language must be alphabetic !')
-    

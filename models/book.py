@@ -1,18 +1,14 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields,api
+from odoo import api, fields, models
+
 
 class Book(models.Model):
     
-    _name = 'about.book'
-    
+    _name = 'about.book' 
     _description = 'Book Information'
-    
     _order = 'publication_date desc, name'
-    
     isbn = fields.Char('ISBN',required=True)
-    
     name = fields.Char('Title', required=True)
-    
     publication_date = fields.Date('Publication Date')
     
     author_ids = fields.Many2many('about.author', select=True, 
@@ -26,7 +22,6 @@ class Book(models.Model):
     _sql_constraints = [('isbn_uniq', 'unique (isbn)','ISBN already exists!')]
     
     book_genre = fields.One2many('about.genre', 'genre_id',select=True,required=True, string="Genres")
-    
     book_language = fields.One2many('about.language', 'language_id',select=True,required=True, string="Language")
     
     
@@ -43,5 +38,3 @@ class Book(models.Model):
         for r in self:
             if r.author_ids == False:
                 raise models.ValidationError('Book must have at least 1 author!')
-    
-
