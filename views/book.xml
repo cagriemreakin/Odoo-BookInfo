@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
    <data>
-      <!-- Action -->
-      <act_window id="about_book_action" name="About Books" res_model="about.book" />
-
-      <!-- Menu Item -->
-                      
-      <menuitem id="top_menu" 
-                name="Book Information" 
-                action="about_book_action" 
-                parent="" 
-                sequence="5" />
-                          
-      <menuitem id="about_book_menu" 
-                name="Books" 
-                action="about_book_action" 
-                parent="top_menu" 
-                sequence="5" />
-
       <!-- Book View Form -->
       <record id="about_book_view_form" model="ir.ui.view">
          <field name="name">About Book Form</field>
@@ -38,7 +21,6 @@
             </form>
          </field>
       </record>
-
       <!-- Book View Tree -->
       <record id="about_book_view_tree" model="ir.ui.view">
          <field name="name">About Book List</field>
@@ -51,7 +33,6 @@
             </tree>
          </field>
       </record>
-      
       <!-- Book View Search -->
       <record id="about_book_view_search" model="ir.ui.view">
          <field name="name">About Book Search</field>
@@ -69,5 +50,10 @@
             </search>
          </field>
       </record>
+      <!-- Actions -->
+      <act_window id="top_menu_action" name="About Books" res_model="about.book" />
+      <!-- Menu Item -->
+      <menuitem id="top_menu" name="Book Information" action="top_menu_action" parent="" sequence="5" />
+      <menuitem id="about_book_menu" name="Books" action="top_menu_action" parent="top_menu" sequence="5" />
    </data>
 </odoo>
