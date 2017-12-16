@@ -8,9 +8,8 @@
          'views/genre.xml',
          'views/language.xml',
          'views/publisher.xml',
-         'data/genre_data.xml',
-         'data/author_data.xml',
-         'data/language_data.xml'],
+         'data/demo.xml',],
+         
 'description': """
         Book module to get information:
             - Author
