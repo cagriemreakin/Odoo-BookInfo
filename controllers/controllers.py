@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import http
 
+
 class Book(http.Controller):
     @http.route('/book/book/', auth='public')
     def index(self, **kw):

@@ -21,6 +21,5 @@
 
 'author': "Cagri Emre Akin",
 'version': '1.0',
-    
-    
+     
 }
