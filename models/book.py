@@ -83,3 +83,8 @@ class Book(models.Model):
             if r.author_ids == False:
                 raise models.ValidationError(
                     'Book must have at least 1 author!')
+    # First letter capitalization 
+    @api.onchange('name')
+    def caps_name(self):
+        if self.name:
+            self.name = str(self.name).title()
