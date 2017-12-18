@@ -13,6 +13,7 @@
                </xpath>
             </data>
          </field>
+        
       </record>
       <!-- Action -->
       <record model="ir.actions.act_window" id="about_author_list_action">

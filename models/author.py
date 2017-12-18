@@ -19,7 +19,7 @@ class Author(models.Model):
         'res.partner',
         string="Author"
     )
-
+    
     @api.multi
     def unlink(self):
         book = self.env['about.book']

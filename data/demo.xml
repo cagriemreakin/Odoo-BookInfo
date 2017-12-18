@@ -226,7 +226,7 @@
         
         <record id="book_1_demo" model="about.book">
             <field name="isbn">10</field>
-            <field name="name">İstanbul'dan Sayfalar</field>
+            <field name="name">Istanbul'dan Sayfalar</field>
             <field name="author_ids" eval="[(6, 0, [ref('author_1_demo')])]"/>
             <field name="publisher_ids" eval="[(6, 0, [ref('publisher_1_demo')])]"/>
             <field name="genre_id" eval="[(6, 0, [ref('genre_9_demo')])]"/>

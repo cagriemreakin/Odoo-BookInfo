@@ -44,7 +44,6 @@ class Book(models.Model):
     publisher_ids = fields.Many2many(
         'about.publisher',
         select=True,
-        required=True,
         string='Publishers',
         domain=[('is_book_publisher', '=', True)]
     )
@@ -67,7 +66,7 @@ class Book(models.Model):
         string="Language"
     )
     
-    # Constraints
+    # Constraints and onchange
     @api.constrains('publication_date')
     def _check_publication_date(self):
         for r in self:
