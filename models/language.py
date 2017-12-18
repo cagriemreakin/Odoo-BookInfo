@@ -18,13 +18,14 @@ class Language(models.Model):
     name = fields.Char('Language', required=True)
 
     # Relation with Book Model
-    language_id = fields.Many2one(
+    book_id = fields.Many2one(
         'about.book',
         select=True,
         string="Book Language"
     )
+    
+    # Constraints
     # Checking the name is alphabetical
-
     @api.constrains('name')
     def is_valid_name(self):
         if not re.match("^[A-Za-z]*$", self.name):

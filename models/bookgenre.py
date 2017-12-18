@@ -19,19 +19,20 @@ class BookGenre(models.Model):
     name = fields.Char('Genre', required=True)
 
     # Relation with Book Model
-    genre_id = fields.Many2one(
+    book_id = fields.Many2one(
         'about.book',
         select=True,
         string="Book Genre"
     )
-
+    
+    # Constraints and Onchange
     # Checking the name is alphabetical
     @api.constrains('name')
     def is_valid_name(self):
         if not re.match("^[A-Za-z\s&-,]*$", self.name):
             raise models.ValidationError('Genre should be alphabetic !')
 
-    # First letter capitalization when onchange
+    # First letter capitalization 
     @api.onchange('name')
     def caps_name(self):
         if self.name:

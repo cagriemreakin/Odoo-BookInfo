@@ -12,14 +12,15 @@
          ],
          
 'description': """
-        Book module to get information:
+            About Book:
             - Author
             - Publisher
             - Book Genre
             - Language
     """,
+'category': 'Book',
 
 'author': "Cagri Emre Akin",
 'version': '1.0',
-     
+
 }

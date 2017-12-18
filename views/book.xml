@@ -12,10 +12,8 @@
                   <field name="name" />
                   <field name="author_ids" widget="many2many_tags" />
                   <field name="publisher_ids" widget="many2many_tags" />
-                  <field name="book_genre" widget="many2many_tags" />
-                  <field name="book_language" widget="many2many_tags" />
-               </group>
-               <group>
+                  <field name="genre_id" widget="many2many_tags" />
+                  <field name="language_id" widget="many2many_tags" />
                   <field name="publication_date" />
                </group>
             </form>
@@ -45,8 +43,8 @@
                <field name="publisher_ids" />
                <filter string="Authors" domain="[('author_ids','=',True)]" />
                <filter string="Publishers" domain="[('publisher_ids','=',True)]" />
-               <field name="book_genre" />
-               <field name="book_language" />
+               <field name="genre_id" />
+               <field name="language_id" />
             </search>
          </field>
       </record>

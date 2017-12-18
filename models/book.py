@@ -50,23 +50,24 @@ class Book(models.Model):
     )
 
     # Relation with Genre Model
-    book_genre = fields.One2many(
+    genre_id = fields.One2many(
         'about.genre',
-        'genre_id',
+        'book_id',
         select=True,
         required=True,
         string="Genres"
     )
 
     # Relation with Language Model
-    book_language = fields.One2many(
+    language_id = fields.One2many(
         'about.language',
-        'language_id',
+        'book_id',
         select=True,
         required=True,
         string="Language"
     )
-
+    
+    # Constraints
     @api.constrains('publication_date')
     def _check_publication_date(self):
         for r in self:

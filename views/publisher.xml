@@ -2,11 +2,11 @@
 <odoo>
    <data>
       <!-- Views -->
-      <record model="ir.ui.view" id="language_form_view">
-         <field name="name">about.language.form</field>
-         <field name="model">about.language</field>
+      <record model="ir.ui.view" id="publisher_form_view">
+         <field name="name">about.publisher.form</field>
+         <field name="model">about.publisher</field>
          <field name="arch" type="xml">
-            <form string="Language Form">
+            <form string="Publisher Form">
                <group>
                   <field name="name" />
                </group>
@@ -14,13 +14,13 @@
          </field>
       </record>
       <!-- Action -->
-      <record model="ir.actions.act_window" id="language_list_action">
-         <field name="name">Language</field>
-         <field name="res_model">about.language</field>
+      <record model="ir.actions.act_window" id="publisher_list_action">
+         <field name="name">Publisher</field>
+         <field name="res_model">about.publisher</field>
          <field name="view_type">form</field>
          <field name="view_mode">tree,form</field>
       </record>
       <!-- Menu -->
-      <menuitem id="language_menu" name="Language" parent="top_menu" action="language_list_action" />
+      <menuitem id="publisher_menu" name="Publisher" parent="top_menu" action="publisher_list_action" />
    </data>
 </odoo>

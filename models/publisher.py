@@ -8,7 +8,7 @@ class Publisher(models.Model):
     _inherits = {'res.partner': 'partner_id'}
     _order = 'name asc'
 
-    # Model Fields
+    # Model Field
     is_book_publisher = fields.Boolean(
         'Is Book Publisher',
         required=True,

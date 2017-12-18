@@ -229,8 +229,8 @@
             <field name="name">İstanbul'dan Sayfalar</field>
             <field name="author_ids" eval="[(6, 0, [ref('author_1_demo')])]"/>
             <field name="publisher_ids" eval="[(6, 0, [ref('publisher_1_demo')])]"/>
-            <field name="book_genre" eval="[(6, 0, [ref('genre_9_demo')])]"/>
-            <field name="book_language" eval="[(6, 0, [ref('language_1_demo')])]"/>
+            <field name="genre_id" eval="[(6, 0, [ref('genre_9_demo')])]"/>
+            <field name="language_id" eval="[(6, 0, [ref('language_1_demo')])]"/>
             <field name="publication_date">12/10/2010</field>
         </record>
         
@@ -240,8 +240,8 @@
             <field name="name">Python</field>
             <field name="author_ids" eval="[(6, 0, [ref('author_2_demo')])]"/>
             <field name="publisher_ids" eval="[(6, 0, [ref('publisher_2_demo')])]"/>
-            <field name="book_genre" eval="[(6, 0, [ref('genre_3_demo')])]"/>
-            <field name="book_language" eval="[(6, 0, [ref('language_2_demo')])]"/>
+            <field name="genre_id" eval="[(6, 0, [ref('genre_3_demo')])]"/>
+            <field name="language_id" eval="[(6, 0, [ref('language_2_demo')])]"/>
             <field name="publication_date">10/10/2010</field>
         </record>
         
@@ -251,8 +251,8 @@
             <field name="name">Java</field>
             <field name="author_ids" eval="[(6, 0, [ref('author_2_demo')])]"/>
             <field name="publisher_ids" eval="[(6, 0, [ref('publisher_2_demo')])]"/>
-            <field name="book_genre" eval="[(6, 0, [ref('genre_1_demo')])]"/>
-            <field name="book_language" eval="[(6, 0, [ref('language_3_demo')])]"/>
+            <field name="genre_id" eval="[(6, 0, [ref('genre_1_demo')])]"/>
+            <field name="language_id" eval="[(6, 0, [ref('language_3_demo')])]"/>
             <field name="publication_date">19/10/2017</field>
         </record>
         
@@ -261,8 +261,8 @@
             <field name="name">C++</field>
             <field name="author_ids" eval="[(6, 0, [ref('author_2_demo'),ref('author_3_demo')])]"/>
             <field name="publisher_ids" eval="[(6, 0, [ref('publisher_1_demo')])]"/>
-            <field name="book_genre" eval="[(6, 0, [ref('genre_1_demo')])]"/>
-            <field name="book_language" eval="[(6, 0, [ref('language_1_demo')])]"/>
+            <field name="genre_id" eval="[(6, 0, [ref('genre_1_demo')])]"/>
+            <field name="language_id" eval="[(6, 0, [ref('language_1_demo')])]"/>
             <field name="publication_date">18/05/2015</field>
         </record>
         
@@ -271,8 +271,8 @@
             <field name="name">Fi</field>
             <field name="author_ids" eval="[(6, 0, [ref('author_5_demo')])]"/>
             <field name="publisher_ids" eval="[(6, 0, [ref('publisher_5_demo')])]"/>
-            <field name="book_genre" eval="[(6, 0, [ref('genre_3_demo'),ref('genre_5_demo'),ref('genre_6_demo')])]"/>
-            <field name="book_language" eval="[(6, 0, [ref('language_1_demo')])]"/>
+            <field name="genre_id" eval="[(6, 0, [ref('genre_3_demo'),ref('genre_5_demo'),ref('genre_6_demo')])]"/>
+            <field name="language_id" eval="[(6, 0, [ref('language_1_demo')])]"/>
             <field name="publication_date">21/12/2015</field>
         </record>
         
